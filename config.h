@@ -3,6 +3,7 @@
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
+#define BROWSER "brave"
 
 /* appearance */
 static unsigned int borderpx = 1; /* border pixel of windows */
@@ -15,7 +16,7 @@ static int swallowfloating = 1; /* 1 means swallow floating windows by default *
 static int smartgaps = 1; /* 1 means no outer gap when there is only one window */
 static int showbar = 1; /* 0 means no bar */
 static int topbar = 1;  /* 0 means bottom bar */
-static char *fonts[] = {"monospace:size=10", "Symbola:pixelsize=16:antialias=true:autohint=true"};
+static char *fonts[]          = { "monospace:size=10", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"  };
 static char normbgcolor[] = "#000000";
 static char normbordercolor[] = "#000000";
 static char normfgcolor[] = "#000000";
@@ -168,7 +169,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_q, spawn, SHCMD("sysact")},
     {MODKEY, XK_w, spawn, SHCMD("$BROWSER")},
     {MODKEY | ShiftMask, XK_w, spawn, SHCMD(TERMINAL " -e sudo nmtui")},
-    {MODKEY, XK_r, spawn, SHCMD(TERMINAL " -e lf")},
+    {MODKEY, XK_r, spawn, SHCMD(TERMINAL " -e lfub")},
     {MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e btm")},
     {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},             /* tile */
     {MODKEY | ShiftMask, XK_t, setlayout, {.v = &layouts[1]}}, /* bstack */
